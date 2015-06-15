@@ -1,1 +1,79 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" id="39" inline="true" x="112" y="-386">
+    <field name="VAR">i</field>
+    <value name="VALUE">
+      <block type="math_number" id="80">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="controls_whileUntil" id="142" inline="false">
+        <field name="MODE">WHILE</field>
+        <value name="NUMBER">
+          <block type="logic_compare" id="160" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="variables_get" id="215">
+                <field name="VAR">i</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="239">
+                <field name="NUM">4</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="movement_forward" id="305">
+            <next>
+              <block type="robot_delay" id="330" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="374">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="movement_right" id="393">
+                    <next>
+                      <block type="robot_delay" id="412" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="425">
+                            <field name="NUM">1000</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="446" inline="true">
+                            <field name="VAR">i</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="524" inline="true">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <block type="variables_get" id="563">
+                                    <field name="VAR">i</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="613">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="movement_stop" id="641"></block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
